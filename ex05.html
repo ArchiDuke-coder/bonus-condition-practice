@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xếp hạng điểm</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let a = parseInt(prompt('Nhập điểm đầu kỳ (trên 100) '));
+    let b = parseInt(prompt('Nhập điểm giữa kỳ (trên 100) '));
+    let c = parseInt(prompt('Nhập điểm cuối kỳ (trên 100) '));
+    let avg = (a+b+c)/3;
+    let rank = "A";
+    if (avg<80){
+        if (avg >= 60){
+            rank = "B"
+        } else {
+            if (avg >= 40){
+                rank = "C";
+            } else {
+                if (avg>=20){
+                    rank = "D";
+                } else {
+                    rank = "E";
+                }
+            }
+        }
+    }
+    alert('Điểm trung bình bằng '+avg.toFixed(0)+'/100'+', xếp hạng '+rank);
+</script>
