@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 2</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    a = parseFloat(prompt('Nhập a: '));
+    b = parseFloat(prompt('Nhập b: '));
+    c = parseFloat(prompt('Nhập c: '));
+    document.write('Phương trình bậc 2 là '+a+'x<sup>2</sup> + '+b+'x +' +c+   ' = 0'+'<br/>');
+    if (a == 0){
+        solveDegree1(b, c);
+    } else {
+        let delta = b*b-4*a*c;
+        if (delta < 0){
+            document.write('Vô nghiệm');
+        } else if (delta == 0){
+            document.write('Nghiệm duy nhất bằng '+(-b)/(2*a).toFixed(3));
+        } else {
+            var sol1 = ((-b)+Math.sqrt(delta))/(2*a);
+            var sol2 = ((-b)-Math.sqrt(delta))/(2*a);
+            document.write('2 nghiệm là '+sol1.toFixed(3)+ ' và '+sol2.toFixed(3));
+        }
+    }
+
+    //giải phương trình bậc 1 khi a = 0
+    function solveDegree1(a, b){
+        if (a == 0){
+            if (b == 0){
+                document.write('Vô số nghiệm');
+            } else {
+                document.write('Vô nghiệm');
+            }
+        } else {
+            let sol = -b/a;
+            document.write('Nghiệm duy nhất bằng '+ sol.toFixed(3));
+        }
+    }
+
+
+
+</script>
